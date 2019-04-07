@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" type="text/css" href="CSS/Cadastro.css" media="screen">
+    <script src="JS\Home.js"></script>
+</head>
+
+<body class="cadastro">
+    <div class="Cad">
+        <div class="home">
+            <a href="../projeto/Home.html"><img src="../projeto/Imagens/Luz.png" height="81px" width="150"></a>
+        </div>
+        <h1>Cadastro de Alunos</h1>
+        <h3>Formulário de Pré-Matricula</h3>
+    </div>
+    <div class="cadastro">
+        <form method="post" action="/Cadastro">
+            <fieldset>
+                <legend><b>Aluno</b></legend>
+                <table width="500px">
+                    <tr class="imagem1">
+                        <td rowspan="10"><img src="../projeto/Imagens/estudante.jpg" height="100" width="100"></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Nome:</td>
+                        <td><input type="text" name="txtnome" size="40"></td>
+                    </tr>
+                    <tr>
+                        <td>Idade:</td>
+                        <td><input type="text" name="txtidade" size="40" maxlength="3"></td>
+                    </tr>
+                    <tr>
+                        <td>Nascimento:</td>
+                        <td><input type="date" name="txtnascimento" size="15"></td>
+                    </tr>
+                    <tr>
+                        <td>Sexo:</td>
+                        <td>
+                            <input type="radio" name="optsexo" value="M"> Masculino
+                            <input type="radio" name="optsexo" value="F"> Feminino
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Nome da Mãe:</td>
+                        <td><input type="text" name="txtmae" size="40"></td>
+                    </tr>
+                    <tr>
+                        <td>Nome de Pai:</td>
+                        <td><input type="text" name="txtpai" size="40">
+                    </tr>
+                    <tr>
+                        <td>RG:</td>
+                        <td><input type="text" name="txtrg" size="15"></td>
+                    </tr>
+                    <tr>
+                        <td>Telefone:</td>
+                        <td><input type="text" name="txttelefone" size="15"></td>
+                    </tr>
+                    <tr>
+                        <td>Email:</td>
+                        <td><input type="email" name="txtemail" size="15" required="required"
+                                placeholder="ex. fulano@gmail.com"></td>
+                    </tr>
+                </table>
+            </fieldset>
+            <fieldset>
+                <legend><b>Endereço</b></legend>
+                <table width="500px">
+                    <tr class="imagem2">
+                        <td rowspan="7"><img src="../projeto/Imagens/casa.png" height="100" width="100"></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Endereço:</td>
+                        <td><input type="text" name="txtendereco" size="40"></td>
+                    </tr>
+                    <tr>
+                        <td>Número:</td>
+                        <td><input type="text" name="txtnumero" size="20"></td>
+                    </tr>
+                    <tr>
+                        <td>Bairro:</td>
+                        <td><input type="text" name="txtbairro" size="20"></td>
+                    </tr>
+                    <tr>
+                        <td>Cidade:</td>
+                        <td><input type="text" name="txtcidade" size="20"></td>
+                    </tr>
+                    <tr>
+                        <td>Cep:</td>
+                        <td><input type="text" name="txtcep" size="20"></td>
+                    </tr>
+                    <tr>
+                        <td>Complemento:</td>
+                        <td><input type="text" name="txtcomplemento" size="40"></td>
+                    </tr>
+                </table>
+            </fieldset>
+            <fieldset>
+                <legend><b>Dados de Pré-Matricula</b></legend>
+                <table width="500px">
+                    <tr class="imagem3">
+                        <td rowspan="6"><img src="../projeto/Imagens/formulario.png" height="100" width="100"></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Série:</td>
+                        <td>
+                            <select>
+                                <option value="">Selecione</option>
+                                <option value="Pré-Escolar">Pré-Escolar</option>
+                                <option value="EnsinoFundamental">Ensino Fundamental</option>
+                                <option value="EnsinoMedio">Ensino Médio</option>
+                            </select><br><br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Turno:</td>
+                        <td>
+                            <input type="radio" name="optturno" value="M"> Manhã <br>
+                            <input type="radio" name="optturno" value="T"> Tarde <br>
+                            <input type="radio" name="optturno" value="N"> Noite <br><br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Atividade Incluida:</td>
+                        <td>
+                            <input type="radio" name="atividade" value="Musica"> Musica <br>
+                            <input type="radio" name="atividade" value="Futebol"> Futebol <br>
+                            <input type="radio" name="atividade" value="Informatica"> Informática <br>
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+            <br>
+            <div class="botao">
+                <input type="submit" value="Salvar Aluno" />
+                <input type="reset" value="Limpar Dados" />
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

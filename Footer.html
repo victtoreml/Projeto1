@@ -1,0 +1,11 @@
+
+<body>
+	<h1>Logar!</h1>
+	<% usuarios.forEach( (usuario) => { %>
+		<p><a href="editar/<%= usuario.id %>">
+				<%=usuario.nome %>
+			</a> |
+			<a href="deletar/<%= usuario.id %>"> Deletar</a></p>
+		<% }); %>
+			<a href="/cadastrar"> Cadastrar Novo Usuario </a>
+</body>

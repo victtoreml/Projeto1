@@ -1,0 +1,121 @@
+body{
+    margin: auto;
+    background: url('../Imagens/background.jpg') repeat-x;
+    
+}
+.cabecalho{
+    height: 200px;
+    width: 90%;
+    background: url('../Imagens/back_topo.gif') repeat-x;
+    margin: 0 auto;
+}
+
+.logo{
+    width: 20%;
+    height: 100%;
+    float: left;
+}
+
+.logo2{
+    width: 20%;
+    height: 100%;
+    float: right;
+}
+.menu{
+    margin-left: 10px;
+    margin-top: 100px;
+    margin-right: 30px;
+    height: 59%;
+    width: 56%;
+    position: relative;
+	float: left;
+    text-align: center;
+    
+}
+
+.menu ul{
+    margin: 0 15% 0 15%;
+    height: 58%;
+    width: 70%;
+    float: left;
+    background-color: orange;
+}
+
+.menu li{
+    text-align: center;
+    padding: none;
+    position: relative;
+	float: left;
+    list-style: none;
+    text-decoration: none;
+    padding-top: 25px;
+    padding-left: 100px;
+
+}
+
+.menu ul li a{
+    color: blue;
+    padding: none;
+    position: relative;
+	float: left;
+    text-decoration: none;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 25px;
+}
+
+.menu ul li a:hover {
+    position: relative;
+	float: left;
+    text-decoration: none;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 25px;
+    text-shadow: 1px 1px 2px #fff;
+}
+
+@media only screen and (max-width: 1300px){
+    .menu{
+        height: 60%;
+        width: 50%;
+        position: relative;
+        float: right;
+        text-align: center;        
+    }
+
+    .menu li{
+        margin: 0%;
+        text-align: center;
+        position: relative;
+        float: left;
+        list-style: none;
+        text-decoration: none;
+        padding-top: 25px;
+        padding-left: 10px;
+    
+    }
+
+}
+
+@media only screen and (max-width: 980px){
+    .menu{
+
+        height: 70%;
+        width: 35%;
+        position: relative;
+        float: right;
+        text-align: center;        
+    }
+
+    .menu li{
+        margin: 0%;
+        text-align: center;
+        position: relative;
+        float: left;
+        list-style: none;
+        text-decoration: none;
+        padding-top: 10px;
+        padding-left: 2px;
+    
+    }
+
+}
+
