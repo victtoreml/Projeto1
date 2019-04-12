@@ -1,0 +1,51 @@
+<body>
+    <header class="cabecalho">
+        <div class="logo">
+            <a href=""><img src="/public/img/Luz.png"></a>
+        </div>
+        <div class="logo2">
+            <a href=""><img src="/public/img/Luz.png"></a>
+        </div>
+        <div class="menu">
+            <ul>
+                <li class="a"><a class="cadastro" href="/Cadastro">Cadastrar Aluno</a></li>
+                <li class="a"><a class="Informacao" href="https://pt-br.facebook.com/EscolaInfantilRaiodeLuz/"
+                        target="_blank">Informações</a> </li>
+            </ul>
+        </div>
+    </header>
+
+    <fieldset>
+        <legend><b>Alunos Cadastrados</b></legend>
+        <tr>
+            <td>
+                {{#each posts}}
+                <h4>Aluno: </h4>
+                <p>Nome: {{nome}} --
+                    Idade: {{idade}} --
+                    Nascimento: {{nasc}} --
+                    Sexo: {{sexo}} --
+                    Nome da Mãe: {{mae}} --
+                    Nome de Pai: {{pai}} --
+                    RG: {{rg}} --
+                    Telefone: {{telefone}} --
+                    Email: {{email}} </p>
+                <h4>Endereço: </h4>
+                <p>Endereço: {{endereco}} --
+                    Número: {{numero}} --
+                    Bairro: {{bairro}} --
+                    Cidade: {{cidade}} --
+                    Cep: {{cep}} --
+                    Complemento: {{complemento}}</p>
+                <h4>Matrícula</h4>
+                <p>Classe: {{classe}} --
+                    Turno: {{turno}} --
+                    Atividade Incluida: {{atividade}}</p>
+                <a href="/deletar/{{id}}"><button>Deletar</button></a>
+                <a href="/editar/{{id}}"><button>Editar</button></a>
+                <hr>
+                {{/each}}
+            </td>
+        </tr>
+    </fieldset>
+</body>

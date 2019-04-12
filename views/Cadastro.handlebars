@@ -1,0 +1,141 @@
+<script>
+    <link rel="stylesheet" type="text/css" href="/public/css/Cadastro.css">
+</script>
+
+<body class="cadastro">
+    <div class="Cad">
+        <div class="home">
+            <a href="/Home"><img src="/public/img/Luz.png" height="81px" width="150"></a>
+        </div>
+        <h1>Cadastro de Alunos</h1>
+        <h3>Formulário de Pré-Matricula</h3>
+    </div>
+    <div class="cadastro">
+        <form method="post" action="/Home">
+            <fieldset>
+                <legend><b>Aluno</b></legend>
+                <table width="500px">
+                    <tr class="imagem1">
+                        <td rowspan="10"><img src="/public/img/estudante.jpg" height="100" width="100"></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Nome:</td>
+                        <td><input type="text" name="txtnome" value="nome" size="40"></td>
+                    </tr>
+                    <tr>
+                        <td>Idade:</td>
+                        <td><input type="text" name="txtidade" value="idade" size="40" maxlength="3"></td>
+                    </tr>
+                    <tr>
+                        <td>Nascimento:</td>
+                        <td><input type="date" name="txtnascimento" value="nascimento" size="15"></td>
+                    </tr>
+                    <tr>
+                        <td>Sexo:</td>
+                        <td>
+                            <input type="radio" name="optsexo" value="Masculino"> Masculino
+                            <input type="radio" name="optsexo" value="Feminino"> Feminino
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Nome da Mãe:</td>
+                        <td><input type="text" name="txtmae" value="mae" size="40"></td>
+                    </tr>
+                    <tr>
+                        <td>Nome de Pai:</td>
+                        <td><input type="text" name="txtpai" value="pai" size="40">
+                    </tr>
+                    <tr>
+                        <td>RG:</td>
+                        <td><input type="text" name="txtrg" value="rg" size="15"></td>
+                    </tr>
+                    <tr>
+                        <td>Telefone:</td>
+                        <td><input type="text" name="txttelefone" value="telefone" size="15"></td>
+                    </tr>
+                    <tr>
+                        <td>Email:</td>
+                        <td><input type="email" name="txtemail" size="15" value="email" required="required"
+                                placeholder="ex. fulano@gmail.com"></td>
+                    </tr>
+                </table>
+            </fieldset>
+            <fieldset>
+                <legend><b>Endereço</b></legend>
+                <table width="500px">
+                    <tr class="imagem2">
+                        <td rowspan="7"><img src="/public/img/casa.png" height="100" width="100"></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Endereço:</td>
+                        <td><input type="text" name="txtendereco" value="endereco" size="40"></td>
+                    </tr>
+                    <tr>
+                        <td>Número:</td>
+                        <td><input type="text" name="txtnumero" value="numero" size="20"></td>
+                    </tr>
+                    <tr>
+                        <td>Bairro:</td>
+                        <td><input type="text" name="txtbairro" value="bairro" size="20"></td>
+                    </tr>
+                    <tr>
+                        <td>Cidade:</td>
+                        <td><input type="text" name="txtcidade" value="cidade" size="20"></td>
+                    </tr>
+                    <tr>
+                        <td>Cep:</td>
+                        <td><input type="text" name="txtcep" value="cep" size="20"></td>
+                    </tr>
+                    <tr>
+                        <td>Complemento:</td>
+                        <td><input type="text" name="txtcomplemento" value="complemento" size="40"></td>
+                    </tr>
+                </table>
+            </fieldset>
+            <fieldset>
+                <legend><b>Dados de Pré-Matricula</b></legend>
+                <table width="500px">
+                    <tr class="imagem3">
+                        <td rowspan="6"><img src="/public/img/formulario.png" height="100" width="100"></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Classe:</td>
+                        <td>
+                            <input type="radio" name="classe" value="Creche"> Creche<br>
+                            <input type="radio" name="classe" value="PreEscolar"> Pre-Escolar<br>
+                            <input type="radio" name="classe" value="EnsinoFundamental"> Ensino Fundamental<br>
+                            <br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Turno:</td>
+                        <td>
+                            <input type="radio" name="optturno" value="Manha"> Manhã<br>
+                            <input type="radio" name="optturno" value="Tarde"> Tarde<br>
+                            <input type="radio" name="optturno" value="Noite"> Noite<br>
+                            <br>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td>Atividade Incluida:</td>
+                        <td>
+                            <input type="radio" name="atividade" value="Musica"> Musica<br>
+                            <input type="radio" name="atividade" value="Futebol"> Futebol<br>
+                            <input type="radio" name="atividade" value="Informatica"> Informática<br>
+                            <br>
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+            <br>
+            <div class="botao">
+                <a href="/views/Home.handlebars"><input type="submit" value="Salvar Aluno" /></a>
+                <input type="reset" value="Limpar Dados" />
+            </div>
+        </form>
+    </div>
+</body>
