@@ -1,5 +1,11 @@
+<header>
+    <header>
+        <link rel="stylesheet" type="text/css" href="public/css/Home.css">
+    </header>
+</header>
+
 <body>
-    <header class="cabecalho">
+    <div class="conteiner">
         <div class="logo">
             <a href=""><img src="/public/img/Luz.png"></a>
         </div>
@@ -13,39 +19,56 @@
                         target="_blank">Informações</a> </li>
             </ul>
         </div>
-    </header>
+        </header>
+    </div>
+    <div class="conteiner2">
+        <fieldset>
+            <legend><h2>Cadastrados:</h2></legend>
 
-    <fieldset>
-        <legend><b>Alunos Cadastrados</b></legend>
-        <tr>
-            <td>
-                {{#each posts}}
-                <h4>Aluno: </h4>
-                <p>Nome: {{nome}} --
-                    Idade: {{idade}} --
-                    Nascimento: {{nasc}} --
-                    Sexo: {{sexo}} --
-                    Nome da Mãe: {{mae}} --
-                    Nome de Pai: {{pai}} --
-                    RG: {{rg}} --
-                    Telefone: {{telefone}} --
-                    Email: {{email}} </p>
-                <h4>Endereço: </h4>
-                <p>Endereço: {{endereco}} --
-                    Número: {{numero}} --
-                    Bairro: {{bairro}} --
-                    Cidade: {{cidade}} --
-                    Cep: {{cep}} --
-                    Complemento: {{complemento}}</p>
-                <h4>Matrícula</h4>
-                <p>Classe: {{classe}} --
-                    Turno: {{turno}} --
-                    Atividade Incluida: {{atividade}}</p>
-                <a href="/deletar/{{id}}"><button>Deletar</button></a>
-                <a href="/editar/{{id}}"><button>Editar</button></a>
-                <hr>
-                {{/each}}
-            </td>
-        </tr>
-    </fieldset>
+
+            {{#each posts}}
+            <fieldset class="alunos">
+                <legend>
+                    <h2> Aluno: {{nome}}</h2>
+                </legend>
+                <tr>
+                    <td>
+                        <div class="dados1">
+                            <h2>Dados Aluno</h2>
+                            <p>Idade: {{idade}}<br>
+                                Nascimento: {{nasc}}<br>
+                                Sexo: {{sexo}}<br>
+                                Nome da Mãe: {{mae}}<br>
+                                Nome de Pai: {{pai}}<br>
+                                RG: {{rg}}<br>
+                                Telefone: {{telefone}}<br>
+                                Email: {{email}} </p>
+                        </div>
+
+                        <div class="dados2">
+                            <h2>Dados Residenciais </h2>
+                            <p>Endereço: {{endereco}}<br>
+                                Número: {{numero}}<br>
+                                Bairro: {{bairro}}<br>
+                                Cidade: {{cidade}}<br>
+                                Cep: {{cep}}<br>
+                                Complemento: {{complemento}}</p>
+                        </div>
+
+                        <div class="dados3">
+                            <h2>Matrícula</h2>
+                            <p>Classe: {{classe}} <br>
+                                Turno: {{turno}} <br>
+                                Atividade Incluida: {{atividade}}</p><br>
+                        </div>
+                        <div class="dados4">
+                            <a href="/deletar/{{id}}"><button>Deletar</button></a>
+                            <a href="/editar/{{id}}"><button>Editar</button></a>
+                        </div>
+                    </td>
+                </tr>
+            </fieldset>
+            {{/each}}
+        </fieldset>
+    </div>
 </body>

@@ -23,7 +23,9 @@ app.use(express.static(path.join(__dirname + '/')));
 
 //Rotas GET
 app.get('/', function (request, response) {
-  response.render('Home')
+  Post.findAll().then(function (posts) {
+    response.render('Home', { posts: posts })
+  })
 })
 
 app.get('/Cadastro', function (request, response) {
@@ -36,7 +38,7 @@ app.get('/Editar', function (request, response) {
 
 app.get('/deletar/:id', function (request, response) {
   Post.destroy({ where: { id: request.params.id } }).then(function () {
-    response.send("Aluno Excluido Com Sucesso")
+    response.redirect('/Home')
   }).catch(function (erro) {
     response.send("Essa Postagem Não Existe")
   })
@@ -80,9 +82,9 @@ app.post('/Home', function (request, response) {
     atividade: request.body.atividade
 
   }).then(function () {
-    response.render("Matricula Cadastrada Com Sucesso")
+    response.redirect('/Home')
   }).catch(function (error) {
-    response.send("Mtricula Não Cadastrado, " + error)
+    response.send("Cadastro Não Realizado, " + error)
   })
 });
 
@@ -109,7 +111,6 @@ app.post('/aluno/editar', (request, response) => {
     aluno.atividade = request.body.atividade
 
     aluno.save().then(() => {
-      response.send("Aluno Alterado Com Sucesso")
       response.redirect('/Home')
     }).catch((err) => {
       response.send("Houve um erro ao editar o aluno")
@@ -117,7 +118,7 @@ app.post('/aluno/editar', (request, response) => {
     })
 
   }).catch((err) => {
-    response.send("Erro ao editar aluno")
+    response.send("Erro ao apresentar alunos")
     response.redirect('/Home')
 
   })
